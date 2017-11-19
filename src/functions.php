@@ -346,7 +346,6 @@ function getFirebaseUid($idToken) {
 function getEmail(string $uid) {
     try{
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/../credentials/firebase_credentials.json');
-        $apiKey = "AIzaSyA6NH0ntC4SQVxlG6AOFozRBnaq8p60RRI";
         $apiKey = "AIzaSyCG69fkPUn3YnV-0AvKRKcYx_KLs-idQnY";
         $firebase = (new Factory)
             ->withServiceAccountAndApiKey($serviceAccount,$apiKey)

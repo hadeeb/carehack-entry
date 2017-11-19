@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Team Gravity</title>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                margin: 50px;
+                padding: 5px;
+                background-color: #1976D2/*#2D72D9*/;
+                /*width: 100%;*/
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                text-align: left;
+                color: #fff;
+                font-size: 18px;
+            }
+
+            h1 {
+                color: #fff/*#719e40*/;
+                letter-spacing: -3px;
+                font-family: 'Lato', sans-serif;
+                font-size: 100px;
+                font-weight: 200;
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>API</h1>
+        <h2>v1</h2>
+        <div>
+            <h3>Public</h3>
+            <ul>
+                <li>
+                    <h4>Enquiry</h4>
+                    <div class="weblink">
+                        /api/v1/info
+                    </div>
+                    <div class="details">
+                        Method : GET <br>
+                        Return : JSON <br>
+                        &emsp;    Departments,Doctors,Availabilty of doctors on each week day
+                    </div>
+                </li>
+                <li>
+                    <h4>About</h4>
+                    <div class="weblink">
+                        /api/v1/about
+                    </div>
+                    <div class="details">
+                        Method : GET <br>
+                        Return : JSON <br>
+                        &emsp;    Team members
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3>Private</h3>
+            <ul>
+                <li>
+                    <h4>Register</h4>
+                    <div class="weblink">
+                        /api/v1/register
+                    </div>
+                    <div class="details">
+                        Method : POST <br>
+                        &emsp; Header: Firebase_Token < Firebase token > <br>
+                        &emsp; Body : email,phone,name,age,gender,address <br>
+                        Return : userID
+                    </div>
+                </li>
+                <li>
+                    <h4>Login</h4>
+                    <div class="weblink">
+                        /api/v1/login
+                    </div>
+                    <div class="details">
+                        Method : GET <br>
+                        &emsp; Header: Firebase_Token < Firebase token > <br>
+                        Return : userID
+                    </div>
+                </li>
+                <li>
+                    <h4>View Patients</h4>
+                    <div class="weblink">
+                        /api/v1/patients/[{userid}]
+                    </div>
+                    <div class="details">
+                        Method : GET <br>
+                        &emsp; Header: Firebase_Token < Firebase token > <br>
+                        Return : JSON
+                    </div>
+                </li>
+                <li>
+                    <h4>Add Patient</h4>
+                    <div class="weblink">
+                        /api/v1/addpatient
+                    </div>
+                    <div class="details">
+                        Method : POST <br>
+                        &emsp; Header: Firebase_Token < Firebase token > <br>
+                        &emsp; Body : name,age,gender <br>
+                        Return : JSON
+                    </div>
+                </li>
+                <li>
+                    <h4>View Appointments</h4>
+                    <div class="weblink">
+                        /api/v1/appointments/[{userid}]
+                    </div>
+                    <div class="details">
+                        Method : GET <br>
+                        &emsp; Header: Firebase_Token < Firebase token > <br>
+                        Return : JSON
+                    </div>
+                </li>
+                <li>
+                    <h4>Add Appointments</h4>
+                    <div class="weblink">
+                        /api/v1/addappointment
+                    </div>
+                    <div class="details">
+                        Method : POST <br>
+                        &emsp; Header : Firebase_Token < Firebase token > <br>
+                        &emsp; Body : patientid,doctorid,date <br>
+                        Return : JSON
+                    </div>
+                </li>
+                <li>
+                    <h4>View Appointments</h4>
+                    <div class="weblink">
+                        /api/v1/appointments/[{userid}]
+                    </div>
+                    <div class="details">
+                        Method : GET <br>
+                        &emsp; Header: Firebase_Token < Firebase token > <br>
+                        Return : JSON
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
